@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="Add Assessment"
+        app:layout_constraintEnd_toStartOf="@+id/setAssessGoalAlert"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/assessmentGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/endDateImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/inputGoalDate">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Performance"
+            tools:layout_editor_absoluteX="171dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Objective"
+            tools:layout_editor_absoluteX="176dp"
+            tools:layout_editor_absoluteY="160dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/assessTypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="89dp"
+        android:text="Type of Assessment:"
+        app:layout_constraintBottom_toTopOf="@+id/saveAssessBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputDueDate" />
+
+    <EditText
+        android:id="@+id/inputDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Due Date"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputAssessName" />
+
+    <Button
+        android:id="@+id/saveAssessBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginBottom="16dp"
+        android:text="Save Assessment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/assessmentGroup" />
+
+    <EditText
+        android:id="@+id/inputAssessName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="Assessment Title"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/clickCoursesTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/setAssessGoalAlert" />
+
+    <EditText
+        android:id="@+id/inputGoalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Goal Date"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputDueDate" />
+
+    <ImageButton
+        android:id="@+id/startDateImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputDueDate"
+        app:layout_constraintStart_toEndOf="@+id/inputDueDate"
+        app:srcCompat="@drawable/calendar_icon" />
+
+    <ImageButton
+        android:id="@+id/endDateImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        app:layout_constraintStart_toEndOf="@+id/inputGoalDate"
+        app:layout_constraintTop_toTopOf="@+id/inputGoalDate"
+        app:srcCompat="@drawable/calendar_icon" />
+
+    <LinearLayout
+        android:id="@+id/coursesLayOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/clickCoursesTxt"
+        app:layout_constraintStart_toStartOf="@+id/clickCoursesTxt"
+        app:layout_constraintTop_toBottomOf="@+id/clickCoursesTxt"></LinearLayout>
+
+    <CheckBox
+        android:id="@+id/setAssessGoalAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="Set Due Date Alert"
+        app:layout_constraintBottom_toTopOf="@+id/clickCoursesTxt"
+        app:layout_constraintStart_toStartOf="@+id/clickCoursesTxt" />
+
+    <TextView
+        android:id="@+id/clickCoursesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="21dp"
+        android:text="Click a Course to add this Assessment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<EditText
+        android:id="@+id/tBd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="143dp" />-->
+</android.support.constraint.ConstraintLayout>

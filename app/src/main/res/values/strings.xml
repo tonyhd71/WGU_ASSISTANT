@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WGU_ASSISTANT</string>
+    <string name="term_title_hint">Enter a title for the term</string>
+    <string name="term_title_label">Title</string>
+    <string name="term_details_label">Details</string>
+    <string name="date_picker_title">Date of Term</string>
+    <string name="new_term">New Term</string>
+    <string name="new_course">New Course</string>
+    <string name="new_assessment">New Assessment</string>
+
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="subtitle_format">%1$d terms</string>
+
+</resources>

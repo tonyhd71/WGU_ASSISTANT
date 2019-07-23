@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <TextView
+        android:id="@+id/coursesHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        android:text="Add Courses"
+        app:layout_constraintStart_toStartOf="@+id/inputMentorName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/courseNameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:ems="10"
+        android:hint="Enter Course Title"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/inputMentorName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputMentorName" />
+
+    <EditText
+        android:id="@+id/inputStart"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="65dp"
+        android:ems="10"
+        android:hint="Start Date"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/inputMentorEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/courseNameInput" />
+
+    <EditText
+        android:id="@+id/inputEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="End Date"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputStart" />
+
+    <Button
+        android:id="@+id/submitStatusBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/optionalNote"
+        app:layout_constraintStart_toEndOf="@+id/optionalNote" />
+
+    <!--<RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="230dp"
+        android:checkedButton="@+id/radioButton1"
+        app:layout_constraintBottom_toTopOf="@+id/courseMentorPhoneTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:text="Completed"
+            tools:layout_editor_absoluteX="190dp"
+            tools:layout_editor_absoluteY="442dp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Progress"
+            tools:layout_editor_absoluteX="190dp"
+            tools:layout_editor_absoluteY="375dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dropped"
+            tools:layout_editor_absoluteX="190dp"
+            tools:layout_editor_absoluteY="507dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plan to Take"
+            tools:layout_editor_absoluteX="190dp"
+            tools:layout_editor_absoluteY="577dp" />
+    </RadioGroup>-->
+
+    <EditText
+        android:id="@+id/optionalNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Optional Note "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/submitStatusBtn"
+        app:layout_constraintStart_toEndOf="@+id/shareNotesBtn" />
+
+    <EditText
+        android:id="@+id/inputMentorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="Mentor Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/clickTermsTxt"
+        app:layout_constraintTop_toTopOf="@+id/clickTermsTxt" />
+
+    <EditText
+        android:id="@+id/inputMentorPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="Mentor Phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="@+id/assessmentsTxt"
+        app:layout_constraintEnd_toStartOf="@+id/assessmentsTxt" />
+
+    <EditText
+        android:id="@+id/inputMentorEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="Mentor Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/showAssessmentsLayout"
+        app:layout_constraintTop_toTopOf="@+id/showAssessmentsLayout" />
+
+    <EditText
+        android:id="@+id/fillerRn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Enter Course Status"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEnd" />
+
+    <Button
+        android:id="@+id/shareNotesBtn"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Share Notes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/optionalNote" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/inputStart"
+        app:layout_constraintTop_toTopOf="@+id/inputStart"
+        app:srcCompat="@drawable/calendar_icon" />
+
+    <ImageButton
+        android:id="@+id/endDateImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        app:layout_constraintStart_toEndOf="@+id/inputEnd"
+        app:layout_constraintTop_toTopOf="@+id/inputEnd"
+        app:srcCompat="@drawable/calendar_icon" />
+
+    <LinearLayout
+        android:id="@+id/termsLayOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/clickTermsTxt"
+        app:layout_constraintStart_toStartOf="@+id/clickTermsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/clickTermsTxt"></LinearLayout>
+
+    <CheckBox
+        android:id="@+id/setReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="21dp"
+        android:text="Set Start/End Date Alert"
+        app:layout_constraintBottom_toTopOf="@+id/optionalNote"
+        app:layout_constraintStart_toEndOf="@+id/optionalNote" />
+
+    <TextView
+        android:id="@+id/clickTermsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="48dp"
+        android:text="Select a Term for this Course"
+        app:layout_constraintBottom_toTopOf="@+id/inputMentorPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/assessmentsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="143dp"
+        android:text="Assessments"
+        app:layout_constraintStart_toEndOf="@+id/inputMentorName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/showAssessmentsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/assessmentsTxt"
+        app:layout_constraintStart_toStartOf="@+id/assessmentsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentsTxt"></LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
